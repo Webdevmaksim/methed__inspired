@@ -1,0 +1,66 @@
+.header{
+    padding: 16px 0;
+    @include tablet{
+        padding: 24px 0 36px;
+    }
+    &__container{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        @include tablet{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &__phone{
+        display: none;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        @include tablet{
+            display: block;
+        }
+        @include laptop{
+            font-size: 14px;
+        }
+    }
+    &__logo{
+        width: 124px;
+        height: 33px;
+        @include tablet{
+            justify-self: center;
+            width: 154px;
+            height: 41px;
+        }
+        @include laptop{
+            width: 250px;
+            height: 65px;
+        }
+    }
+    &__naviagtion{
+        justify-self: end;  
+        
+    }
+    &__nav-list{
+        display: flex;
+        align-items: center;
+    }
+    &__nav-item{
+        &:not(:last-child){
+            margin-right: 16px;
+            @include tablet{
+                margin-right: 24px;
+            }
+        }
+
+    }
+    &__link{
+        transition: color 0.3s ease-in-out;
+        @include desktop{
+            &:hover{
+                color:$grey;
+            }
+        }
+    }
+
+}

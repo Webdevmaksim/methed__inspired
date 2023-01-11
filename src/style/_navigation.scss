@@ -1,0 +1,12 @@
+.navigation{
+    margin-bottom: 19px;
+    @include tablet{
+        margin-bottom: 31px;
+    }
+    @include laptop{
+        margin-bottom: 38px;
+    }
+    @include desktop{
+        margin-bottom: 50px;
+    }
+}

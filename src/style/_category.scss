@@ -1,0 +1,42 @@
+.category{
+    display: flex;
+    flex-wrap: wrap;
+    &__wrapper{
+        margin: 0 -31px;
+        @include desktop{
+            max-width: 692px;
+            margin: 0 auto;
+        }
+    }
+    @include desktop{
+        margin: 0 -51px;
+    }
+    &__item{
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: uppercase;
+        margin: 31px;
+        @include laptop{
+            font-size: 14px;
+            line-height: 17px;
+        }
+        @include tablet{
+            font-size: 12px;
+            line-height: 15px;
+            margin: 48px;
+        }
+        @include desktop{
+            padding: 24px 0 12px;
+            margin: 0 51px;
+        }
+    }
+}
+// .category{
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 0 auto;
+//     @include desktop{
+//         padding: 24px 0 12px;
+//         max-width: 692px;
+//     }
+// }

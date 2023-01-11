@@ -1,10 +1,21 @@
 .container{
     margin: 0 auto;
-    padding: 0px 15px;
-}
+    padding: 0px calc(var(--padding) / 2);
+    max-width: 620px;
 
-@media (min-width: 1200px) {
-    .container{
-        max-width: 1150px;
+    @include laptop{
+        max-width: 880px;
+        padding: 0px var(--padding);
     }
+    @include desktop{
+        max-width: calc(var(--max-width) + var(--padding) * 2 );
+
+    }
+    // @media (min-width: 768px){
+        
+    // }
+
+
+    // @media (min-width: 1440px){
+    // }
 }
