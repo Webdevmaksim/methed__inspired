@@ -8,7 +8,7 @@ https://youtu.be/o8KMucDpSno
 ## Команды
 
 ### Запуск сервера для разработки
-```shell
+```
 npm run start
 ```
 
