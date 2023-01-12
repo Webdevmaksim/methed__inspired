@@ -1,0 +1,66 @@
+.product{
+    &__link{
+        margin-bottom: 10px;
+        @include laptop{
+            margin-bottom: 16px;
+        }
+    }
+    &__image{
+        margin-bottom: 10px;
+        @include laptop{
+            margin-bottom: 16px;
+        }
+    }
+    &__title{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: $main-color;
+        margin-bottom: 10px;
+        @include laptop{
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 16px;
+        }
+    }
+    &__row{
+
+    }
+    &__price{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: $main-color;
+        @include laptop{
+            font-size: 14px;
+            line-height: 17px
+        }
+    }
+    &__btn-favorite{
+
+    }
+    &__color-list{
+
+    }
+    &__color-item{
+        .color--black{
+
+        }
+        .color{
+
+        }
+
+        .color--red{
+
+        }
+
+        .color--check{
+
+        }
+
+        .color--white{
+
+        }
+
+    }
+}

@@ -41,3 +41,14 @@ $mobile: 540px;
         @content;
     }
 }
+
+/* MAIN */
+main{
+    margin-bottom: 60px;
+    @include tablet{
+        margin-bottom: 80px;
+    }
+    @include laptop{
+        margin-bottom: 120px;
+    }
+}

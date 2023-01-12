@@ -1,0 +1,71 @@
+.hero{
+    padding: 76px 0 24px;
+    margin-bottom: 24px;
+    color: $second-color;
+    background-color: $dark-grey;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include tablet{
+        padding: 156px 0 50px;
+        margin-bottom: 64px;
+    }
+    @include laptop{
+        padding: 176px 0 86px;
+        margin-bottom: 80px;
+    }
+    &__woman{
+        background-image: url('../img/hero__woman-bg--mobile.jpg');
+        @include tablet{
+            background-image: url('../img/hero__woman-bg--tablet.jpg');
+        }
+        @include laptop{
+            background-image: url('../img/hero__woman-bg--laptop.jpg');
+        }
+        @include desktop{
+            background-image: url('../img/hero__woman-bg.jpg');
+        }
+    }
+    &__man{
+        background-image: url('../img/hero__man-bg.jpg');
+    }
+    // .hero__woman
+    &__title{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        max-width: 290px;
+        @include tablet{
+            font-size: 30px;
+            margin-bottom: 24px;
+            max-width: 402px;
+        }
+        @include laptop{
+            font-size: 44px;
+            margin-bottom: 40px;
+            max-width: 590px;
+        }
+    }
+	// .hero__title
+    &__link{
+        display: inline-block;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: uppercase;
+        color: $second-color;
+        border: 1px solid $second-color;
+        padding: 12px 41px;
+        transition: all 0.3s ease-in-out;
+        @include laptop{
+            font-size: 14px;
+            line-height: 17px;
+            &:hover{
+                background: #404040
+            }
+        }
+    }
+	// .hero__link
+}
