@@ -14,7 +14,7 @@
         padding: 176px 0 86px;
         margin-bottom: 80px;
     }
-    &__woman{
+    &--woman{
         background-image: url('../img/hero__woman-bg--mobile.jpg');
         @include tablet{
             background-image: url('../img/hero__woman-bg--tablet.jpg');
@@ -26,7 +26,7 @@
             background-image: url('../img/hero__woman-bg.jpg');
         }
     }
-    &__man{
+    &--man{
         background-image: url('../img/hero__man-bg.jpg');
     }
     // .hero__woman
