@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    &--wrapper{
+    &-wrapper{
         @include desktop{
             max-width: 692px;
             margin: 0 auto;
