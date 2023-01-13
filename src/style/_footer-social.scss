@@ -1,0 +1,28 @@
+.footer-social{
+    &__title{
+        margin-bottom: 8px;
+        @include tablet{
+            margin-bottom: 16px;
+        }
+    }
+    &__subtitle{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: $main-color;
+        margin-bottom: 16px;
+        @include tablet{
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 20px;
+        }
+    }
+    &__list{
+        display: flex;
+    }
+    &__item{
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+} 

@@ -1,0 +1,48 @@
+.color{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    &::after{
+        //todo content: attr() - for color change! 
+        //? got it ? 
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 11px;
+        height: 11px;
+        border: 1px solid $second-color;
+        border-radius: 50%;
+    }
+    @include laptop{
+        cursor: pointer;
+        &:hover{
+            border: 0.4px solid #929292;
+        }
+    }
+    &--black{
+        &::after{
+            background-color: black;
+            border: 1px solid black;
+        }
+    }
+    &--red{
+        &::after{
+            border: 1px solid red;
+            background-color: red;
+        }
+    }
+    &--check{
+        border: 0.4px solid #929292;
+    }
+    &--white{
+        &:after{
+            background-color: $second-color;
+            border: 1px solid $main-color;
+        }
+    }
+}

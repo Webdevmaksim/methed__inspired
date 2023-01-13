@@ -1,0 +1,134 @@
+.footer {
+    // .footer__container
+    &__container {
+        border-top: 1px solid $light-grey;
+        padding: 16px 0;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        grid-template-areas: 
+            'category socials'
+            'contacts contacts'
+            'development development'
+            'copyrights copyrights';
+        gap: 17px 20px;
+        @include tablet{
+            gap: 24px 20px;
+            padding: 25px 0 16px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            'category socials contacts'
+            'copyrights . development';
+        }
+        @include laptop{
+            padding: 30px 0px 24px;
+        }
+        @include desktop{
+            padding-top: 50px;
+        }
+    }
+
+    // .footer__item
+
+    &__item {
+        &--category {
+            grid-area: category;
+        }
+        &--social {
+            grid-area: socials;
+        }
+    
+        // .footer__item--contacts
+    
+        &--contacts {
+            grid-area: contacts;
+        }
+    
+        // .footer__item--copyright
+    
+        &--copyright {
+            grid-area: copyrights;
+        }
+    
+        // .footer__item--development
+    
+        &--development {
+            grid-area: development;
+        }
+        
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: $main-color;
+        @include tablet{
+            font-size: 16px;
+            line-height: 19px;
+        }
+        @include laptop{
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    // .footer__link
+
+    &__link {
+        transition: color 0.3s ease-in-out;
+        @include tablet{
+            &:hover{
+                cursor: pointer;
+                color: $grey;
+            }
+        }
+    }
+}
+
+.footer-category--title {
+}
+.footer-social {
+
+    // .footer-social__title
+
+    &__title {
+    }
+
+    // .footer-social__subtitle
+
+    &__subtitle {
+    }
+}
+.footer-socials {
+
+    // .footer-socials__list
+
+    &__list {
+    }
+
+    // .footer-socials__item
+
+    &__item {
+    }
+
+    // .footer-socials__link
+
+    &__link {
+    }
+}
+.footer-contacts {
+}
+.footer-copyright {
+}
+.footer-development {
+
+    // .footer-development__list
+
+    &__list {
+    }
+
+    // .footer-development__item
+
+    &__item {
+    }
+}

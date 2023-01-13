@@ -1,0 +1,27 @@
+.footer-contacts{
+    color: red;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $main-color;
+    @include tablet{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    @include laptop{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    a{
+        display: block;
+        &:not(:last-child){
+            margin-bottom: 9px;
+            @include tablet{
+                margin-bottom: 21px;
+            }
+            @include laptop{
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

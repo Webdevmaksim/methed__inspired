@@ -1,0 +1,18 @@
+.footer-development{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+    color: $main-color;
+    @include laptop{
+        font-size: 12px;
+    }
+    &__item{
+        margin-bottom: 4px;
+        @include tablet{
+            margin-bottom: 11px;
+        }
+        @include laptop{
+            margin-bottom: 8px;
+        }
+    }
+}

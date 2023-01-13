@@ -1,0 +1,9 @@
+.footer-copyright{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+    color: $main-color;
+    @include laptop{
+        font-size: 12px;
+    }
+}
