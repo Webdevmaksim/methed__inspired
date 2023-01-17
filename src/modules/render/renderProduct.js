@@ -1,3 +1,9 @@
+import product1 from '../../img/product01.jpg';
+import product2 from '../../img/product02.jpg';
+
+//? - maybe later
+// import product3 from '../../img/product03.jpg';
+
 export const renderProducts = () => {
     const goods = document.querySelector('.goods');
 
@@ -8,7 +14,7 @@ export const renderProducts = () => {
         <li class="goods__item">
             <article class="product">
                 <a href="#" class="product__link">
-                    <img src="img/product01.jpg" alt="Бюстгальтер-Балконет Wien из Микрофибры" class="product__image">
+                    <img src="${product1}" alt="Бюстгальтер-Балконет Wien из Микрофибры" class="product__image">
                     <h3 class="product__title">Бюстгальтер-Балконет Wien из Микрофибры</h3>
                 </a>
                 <div class="product__row">
@@ -38,7 +44,7 @@ export const renderProducts = () => {
         <li class="goods__item">
             <article class="product">
                 <a href="#" class="product__link">
-                    <img src="img/product02.jpg" alt="Бюстгальтер-Балконет Prague Full Cover" class="product__image">
+                    <img src="${product2}" alt="Бюстгальтер-Балконет Prague Full Cover" class="product__image">
                     <h3 class="product__title">Бюстгальтер-Балконет Prague Full Cover</h3>
                 </a>
                 <div class="product__row">
@@ -67,7 +73,7 @@ export const renderProducts = () => {
         <li class="goods__item">
             <article class="product">
                 <a href="#" class="product__link">
-                    <img src="img/product02.jpg" alt="Бюстгальтер-Балконет Prague Full Cover" class="product__image">
+                    <img src="${product1}" alt="Бюстгальтер-Балконет Prague Full Cover" class="product__image">
                     <h3 class="product__title">Бюстгальтер-Балконет Prague Full Cover</h3>
                 </a>
                 <div class="product__row">
@@ -96,7 +102,7 @@ export const renderProducts = () => {
         <li class="goods__item">
             <article class="product">
                 <a href="#" class="product__link">
-                    <img src="img/product02.jpg" alt="Бюстгальтер-Балконет Prague Full Cover" class="product__image">
+                    <img src="${product2}" alt="Бюстгальтер-Балконет Prague Full Cover" class="product__image">
                     <h3 class="product__title">Бюстгальтер-Балконет Prague Full Cover</h3>
                 </a>
                 <div class="product__row">
@@ -125,7 +131,7 @@ export const renderProducts = () => {
         <li class="goods__item">
             <article class="product">
                 <a href="#" class="product__link">
-                    <img src="img/product02.jpg" alt="Бюстгальтер-Балконет Prague Full Cover" class="product__image">
+                    <img src="${product2}" alt="Бюстгальтер-Балконет Prague Full Cover" class="product__image">
                     <h3 class="product__title">Бюстгальтер-Балконет Prague Full Cover</h3>
                 </a>
                 <div class="product__row">
