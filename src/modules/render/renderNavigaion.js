@@ -31,7 +31,6 @@ export const renderNaviagtion = (gender) => {
                 textContent: item.title,
                 href: `#/${gender}/${item.slug}`
             },{
-                //? 1:13 - I don't understand why it doesn't work
                 cb(elem){
                     elem.addEventListener('click', () =>{
                         

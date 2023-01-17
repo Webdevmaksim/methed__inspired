@@ -1,8 +1,7 @@
 import { createElement } from "../createElement";
 import  logo from '../../img/main-logo.svg';
 
-//? What to do with aria labels????
-/* aria-label="search-button" */
+
 export const searchBtn = createElement('button',{
     className: 'header__link',
     ariaLabel: 'search-button',
@@ -14,8 +13,7 @@ export const searchBtn = createElement('button',{
     `
 });
 
-//? Aria-labels???
-/* aria-label="cart" */
+
 export const cartLink = createElement('a',{
     className: 'header__link',
     ariaLabel: 'cart',
@@ -28,8 +26,7 @@ export const cartLink = createElement('a',{
     href: 'cart'
 });
 
-//? Aria-labels???
-/* aria-label="favorites" */
+
 export const favoriteLink = createElement('a',{
     className: 'header__link',
     ariaLabel: 'favorites',
