@@ -14,22 +14,22 @@
         padding: 176px 0 86px;
         margin-bottom: 80px;
     }
-    &--woman{
-        background-image: url('../img/hero__woman-bg--mobile.jpg');
+    &--women{
+        background-image: url('../img/hero__women-bg--mobile.jpg');
         @include tablet{
-            background-image: url('../img/hero__woman-bg--tablet.jpg');
+            background-image: url('../img/hero__women-bg--tablet.jpg');
         }
         @include laptop{
-            background-image: url('../img/hero__woman-bg--laptop.jpg');
+            background-image: url('../img/hero__women-bg--laptop.jpg');
         }
         @include desktop{
-            background-image: url('../img/hero__woman-bg.jpg');
+            background-image: url('../img/hero__women-bg.jpg');
         }
     }
-    &--man{
-        background-image: url('../img/hero__man-bg.jpg');
+    &--men{
+        background-image: url('../img/hero__men-bg.jpg');
     }
-    // .hero__woman
+    // .hero__women
     &__title{
         font-weight: 400;
         font-size: 20px;

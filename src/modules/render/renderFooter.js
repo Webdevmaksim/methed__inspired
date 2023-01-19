@@ -76,7 +76,7 @@ export const renderFooter = () => {
 
             <div class="footer__item footer__item--contacts footer-contacts">
                 <a href="mailto:Inspired@gmail.com" class="footer__link">Inspired@gmail.com</a>
-                <a href="tel:893049026 0" class="footer__link">8 930 490 26 20</a>
+                <a href="tel:8930490260" class="footer__link">8 930 490 26 20</a>
             </div>
 
             <div class="footer__item footer__item--copyright footer-copyright">

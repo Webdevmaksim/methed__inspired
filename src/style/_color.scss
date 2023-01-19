@@ -24,25 +24,4 @@
             border: 0.4px solid #929292;
         }
     }
-    &--black{
-        &::after{
-            background-color: black;
-            border: 1px solid black;
-        }
-    }
-    &--red{
-        &::after{
-            border: 1px solid red;
-            background-color: red;
-        }
-    }
-    &--check{
-        border: 0.4px solid #929292;
-    }
-    &--white{
-        &:after{
-            background-color: $second-color;
-            border: 1px solid $main-color;
-        }
-    }
 }

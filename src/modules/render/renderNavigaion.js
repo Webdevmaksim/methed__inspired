@@ -1,5 +1,5 @@
+import { DATA } from "../const";
 import { createElement } from "../createElement";
-import { dataNavigation } from "../dataNavigation";
 
 
 export const renderNaviagtion = (gender) => {
@@ -22,7 +22,7 @@ export const renderNaviagtion = (gender) => {
         parent: container
     });
 
-    const categoryElems = dataNavigation[gender].list.map(item => createElement('li', 
+    const categoryElems = DATA.navigation[gender].list.map(item => createElement('li', 
         {
             className: 'category__item'
         },{
@@ -59,13 +59,13 @@ export const renderNaviagtion = (gender) => {
     });
 
     
-    for (const genderName in dataNavigation) {
+    for (const genderName in DATA.navigation) {
         createElement('a',{
             className: `gender__link
                         ${gender === genderName ? 'gender__link--active' : ''}
             `,
             href: `#/${genderName}`,
-            textContent: dataNavigation[genderName].title
+            textContent: DATA.navigation[genderName].title
         },{
             parent: createElement('li',{
                 className: 'gender__item'

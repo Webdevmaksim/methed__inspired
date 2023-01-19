@@ -3,9 +3,9 @@ import { renderNaviagtion } from "../render/renderNavigaion";
 import { renderProducts } from "../render/renderProduct";
 
 
-export const mainPage = (gender = 'woman') => {
+export const mainPage = (gender = 'women') => {
     renderNaviagtion(gender);
     renderHero(gender);
-    renderProducts(gender);
+    renderProducts('новинки', {gender});
 };
 
