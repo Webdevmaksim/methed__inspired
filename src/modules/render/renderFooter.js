@@ -1,59 +1,64 @@
-export const renderFooter = () => {
+import { DATA } from "../const";
+import { createElement } from "../createElement";
+
+export const renderFooter = (gender) => {
     const footer = document.querySelector('.footer');
 
+    
+    const hui =`
+            <ul class="footer-category__list">
+                <li class="footer-category__item">
+                    <h3 class="footer-category__subtitle">
+                        <a href="#" class="footer__link">Женщины</a>
+                    </h3>
+                    <ul class="footer-category__sublist">
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Бюстгальтеры</a>
+                        </li>
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Трусы</a>
+                        </li>
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Носки</a>
+                        </li>
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Халаты</a>
+                        </li>
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Термобелье</a>
+                        </li>
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Пижамы</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="footer-category__item">
+                    <h3 class="footer-category__subtitle">
+                        <a href="#" class="footer__link">Мужчины</a>
+                    </h3>
+                    <ul class="footer-category__sublist">
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Трусы</a>
+                        </li>
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Носки</a>
+                        </li>
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Халаты</a>
+                        </li>
+                        <li class="footer-category__subitem">
+                            <a href="#" class="footer__link">Термобелье</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        
+    `;
     footer.innerHTML =`
         <div class="container">
         <div class="footer__container">
-            <div class="footer__item footer__item--category footer-category">
-                <h2 class="footer__title footer-category__title">Каталог</h2>
-                <ul class="footer-category__list">
-                    <li class="footer-category__item">
-                        <h3 class="footer-category__subtitle">
-                            <a href="#" class="footer__link">Женщины</a>
-                        </h3>
-                        <ul class="footer-category__sublist">
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Бюстгальтеры</a>
-                            </li>
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Трусы</a>
-                            </li>
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Носки</a>
-                            </li>
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Халаты</a>
-                            </li>
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Термобелье</a>
-                            </li>
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Пижамы</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="footer-category__item">
-                        <h3 class="footer-category__subtitle">
-                            <a href="#" class="footer__link">Мужчины</a>
-                        </h3>
-                        <ul class="footer-category__sublist">
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Трусы</a>
-                            </li>
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Носки</a>
-                            </li>
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Халаты</a>
-                            </li>
-                            <li class="footer-category__subitem">
-                                <a href="#" class="footer__link">Термобелье</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            
 
             <div class="footer__item footer__item--social footer-social">
                 <h2 class="footer__title footer-social__title">Связатсья с нами</h2>
@@ -97,4 +102,86 @@ export const renderFooter = () => {
         <!-- /.footer__container -->
         </div>
     `;
+
+    //! - generatingShit 
+        const footerContainer = document.querySelector('.footer__container');
+
+
+        const footerCategory = createElement('div',{
+            className: 'footer__item footer-category footer__item--category'
+        },{
+            parent: footerContainer,
+            append: createElement('h2',{
+                className: 'footer__title footer-category__title',
+                textContent: 'Каталог'
+            })
+        });
+
+        const genderCategories = createElement('ul',{
+            className: 'footer-category__list'
+        },{
+            parent: footerCategory
+        });
+
+        for (const genderName in DATA.navigation) {
+
+            createElement('a',{
+                className: 'footer__link',
+                href: `#/${genderName}`,
+                textContent: DATA.navigation[genderName].title
+            },{
+                parent: createElement('h3',{
+                    className: 'footer-category__subtitle'
+                },{
+                    parent:  createElement('li',{
+                        className: 'footer-category__item'
+                    },{
+                        parent: genderCategories
+                    })
+                })
+            });
+        }
+
+        const footerCategoryItem = document.querySelectorAll('.footer-category__item');
+
+        //! - man list generation
+        const menItemsUl = createElement('ul',{
+            className:'footer-category__sublist'
+        });
+
+        const menElems = DATA.navigation.men.list.map(item=> createElement('li',{
+                className:'footer-category__subitem'
+            },{
+                append: createElement('a',{
+                    className: 'category__link',
+                    textContent: item.title,
+                    href: `#/${item.slug}`
+                })
+            })
+            );
+            
+        menItemsUl.append(...menElems);
+
+        footerCategoryItem[1].append(menItemsUl);
+        
+        //! - women list generation
+        const womenItemsUl = createElement('ul',{
+            className:'footer-category__sublist'
+        });
+
+        const womenElems = DATA.navigation.women.list.map(item=> createElement('li',{
+                className:'footer-category__subitem'
+            },{
+                append: createElement('a',{
+                    className: 'category__link',
+                    textContent: item.title,
+                    href: `#/${item.slug}`
+                })
+            })
+            );
+            
+        womenItemsUl.append(...womenElems);
+
+        footerCategoryItem[0].append(womenItemsUl);
+        
 };

@@ -60,6 +60,7 @@ export const renderNaviagtion = (gender) => {
 
     
     for (const genderName in DATA.navigation) {
+
         createElement('a',{
             className: `gender__link
                         ${gender === genderName ? 'gender__link--active' : ''}
@@ -77,51 +78,5 @@ export const renderNaviagtion = (gender) => {
     }
 
 
-    `
-    <div class="container">
-    <ul class="navigation__gender gender">
 
-        <li class="gender__item">
-            <a href="#" class="gender__link gender__link--active">Женщины</a>
-        </li>
-
-        <li class="gender__item">
-            <a href="#" class="gender__link">Мужчины</a>
-        </li>
-    </ul>
-    <!-- /.navigation__gender -->
-    <div class="category-wrapper">
-        <ul class="navigation__category category">
-            <li class="category__item">
-                <a href="#" class="category__link category__link--active">Бюстгальтеры
-                    </a>
-            </li>
-            <li class="category__item">
-                <a href="#" class="category__link">Трусы
-                    </a>
-            </li>
-            <li class="category__item">
-                <a href="#" class="category__link">Носки
-                    </a>
-            </li>
-            <li class="category__item">
-                <a href="#" class="category__link">Халаты
-                    </a>
-            </li>
-            <li class="category__item">
-                <a href="#" class="category__link">Термобелье
-                    </a>
-            </li>
-            <li class="category__item">
-                <a href="#" class="category__link">Пижамы
-                    
-                </a>
-            </li>
-        </ul>
-        <!-- /.navigation__category -->
-    </div>
-    <!-- /.navigatio__wrapper -->
-</div>
-<!-- /.container -->
-    `;
 };
