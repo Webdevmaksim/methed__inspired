@@ -42,21 +42,20 @@ export const renderFooter = () => {
                 className: 'footer-category__sublist'
             },{
                 parent: footerCategoryItem,
-                appends: DATA.navigation[key].list.map(item=>{
+                appends: DATA.navigation[key].list.map(elem=>{
                     return createElement('li',{
                         className: 'footer-category__subitem'
                     },{
                         append: createElement('a',{
                             className: 'footer__link',
-                            href: `#/${key}/${item.slug}`,
-                            textContent: item.title
+                            href: `#/${key}/${elem.slug}`,
+                            textContent: elem.title
                         })
                     });
                 })
             });
 
         }
-        // ! - 31:28
         return footerCategory;
     };
 

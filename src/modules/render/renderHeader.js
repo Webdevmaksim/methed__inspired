@@ -1,5 +1,6 @@
 import { createElement } from "../createElement";
 import  logo from '../../img/main-logo.svg';
+import { search, searchToggle } from "./renderSearch";
 
 
 export const searchBtn = createElement('button',{
@@ -11,6 +12,10 @@ export const searchBtn = createElement('button',{
             <path d="M16.4431 16.4438L20.9994 21.0002"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>			
     `
+},{
+    cb(btn){
+        btn.addEventListener('click', searchToggle);
+    }
 });
 
 
@@ -94,4 +99,5 @@ export const renderHeader = () => {
     const header = document.querySelector('.header');
 
     header.append(container);
+    header.after(search);
 };
