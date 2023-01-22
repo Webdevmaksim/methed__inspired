@@ -5,15 +5,34 @@
     }
     &__form{
         display: flex;
+        padding-bottom: 24px;
+        align-items: center;
+        width: 100%;
+        min-height: 36px;
+        @include laptop{
+            min-height: 46px;
+            padding-bottom: 36px;
+        }
     }
     &__input{
-        opacity: 0.4;
         flex-grow: 1;
+        height: 100%;
         font-weight: 400;
         font-size: 10px;
         line-height: 12px;
         padding: 12px 16px;
         margin-right: 2px;
+        border: 1px solid $dark-grey;
+        &:focus{
+            outline:none;
+            border: 1px solid $main-color;
+        }
+        &::placeholder{
+            opacity: 0.4;
+        }
+        &::-webkit-search-cancel-button{
+            display: none;
+        }
         @include laptop{
             padding: 14px 24px;
             font-size: 14px;
@@ -21,6 +40,7 @@
         }
     }
     &__btn{
+        min-height: 36px;
         padding: 12px 29px;
         font-weight: 700;
         font-size: 10px;
@@ -30,6 +50,7 @@
         background-color: $main-color;
         transition: all 0.3s ease-in-out;
         @include laptop{
+            min-height: 46px;
             font-size: 14px;
             line-height: 17px;
             &:hover{

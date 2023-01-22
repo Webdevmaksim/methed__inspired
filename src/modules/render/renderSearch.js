@@ -1,6 +1,6 @@
 import { searchController } from "../controllers/searchController";
 import { createElement } from "../createElement";
-//? - 49:50 WTF?????
+
 export const search = createElement('div',{
     className: 'search'
 });
@@ -18,7 +18,8 @@ const container = createElement('div',{
 const form = createElement('form',{
     className: 'search__form'
 },{
-    parent: container
+    parent: container,
+    cb: searchController
 });
 
 createElement('input',{
@@ -27,8 +28,7 @@ createElement('input',{
     placeholder: 'Найти...',
     className: 'search__input',
 },{
-    parent: form,
-    cb: searchController
+    parent: form
 });
 
 createElement('button',{
