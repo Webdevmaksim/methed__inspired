@@ -2,17 +2,16 @@ import './index.html';
 import './index.scss';
 
 import { router } from './modules/router';
-import { mainPage } from './modules/mainPage/mainPage';
+import { mainPage } from './modules/mainPage';
 import { renderFooter } from './modules/render/renderFooter';
 import { renderHeader } from './modules/render/renderHeader';
-import { womenMainPage } from './modules/mainPage/womenMainPage';
-import { menMainPage } from './modules/mainPage/menMainpage';
 import { createCssColors } from './modules/createCssColors';
 
 //* API
 import { getData } from './modules/getData';
 import { API_URL, DATA } from './modules/const';
 import { createElement } from './modules/createElement';
+import { categoryPage } from './modules/categoryPage';
 
 const init = async () =>{
     try{
@@ -31,15 +30,17 @@ const init = async () =>{
         });
 
         router.on('women', () => {
-            womenMainPage();
+            mainPage('women');
         });
 
         router.on('men', () => {
-            menMainPage();
+            mainPage('men');
         });
 
+        router.on('/:gender/:category', categoryPage);
+
         router.on('search', (data)=>{
-            console.log(data.params.value);
+            // console.log(data.params.value);
         });
 
         // setTimeout(() => {
@@ -50,6 +51,7 @@ const init = async () =>{
         //     router.navigate('women');
         // }, 5000);
     }catch(ev){
+        console.warn(ev);
         createElement('h2',{
             textContent: 'Что-то пошло не так, попробуйте позже...'
         },{

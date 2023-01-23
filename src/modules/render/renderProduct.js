@@ -1,13 +1,15 @@
-import { API_URL, DATA } from "../const";
+import { API_URL, COUNT_PAGINATION, DATA } from "../const";
 import { createElement } from "../createElement";
 import { getData } from "../getData";
+import { renderPagination } from "./renderPagination";
 
 export const renderProducts = async (title, params) => {
-
     const products = document.querySelector('.goods');
-    const goods = await getData(`${API_URL}/api/goods`, params);
-    
     products.textContent = '';
+
+    const data = await getData(`${API_URL}/api/goods`, params);
+    
+    const goods = Array.isArray(data) ? data : data.goods;
 
     const container = createElement('div',{
         className: 'container'
@@ -32,7 +34,7 @@ export const renderProducts = async (title, params) => {
             innerHTML: `
             <a href="#/product/${product.id}" class="product__link">
                 <img src="${API_URL}/${product.pic}" alt="${product.title}" class="product__image">
-                <h3 class="product__title">Бюстгальтер-Балконет Wien из Микрофибры</h3>
+                <h3 class="product__title">${product.title}</h3>
             </a>
             <div class="product__row">
                 <p class="product__price">руб ${product.price}</p>
@@ -68,4 +70,14 @@ export const renderProducts = async (title, params) => {
         appends: listCard,
         parent: container
     });
+
+    if(data.page && data.pages > 1){
+        const pagination =  createElement('div',{
+            className: 'goods__pagination pagination'
+        },{
+            parent: container
+        });
+
+        renderPagination(pagination, data.page, data.pages, COUNT_PAGINATION);
+    }
 };

@@ -1,0 +1,7 @@
+.pagination{
+    text-align: center;
+    &__list{
+        display: inline-flex;
+        list-style: none;
+    }
+}

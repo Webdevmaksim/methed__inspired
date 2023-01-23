@@ -13,6 +13,7 @@
     @include laptop{
         padding: 176px 0 86px;
         margin-bottom: 80px;
+        background-attachment: fixed;
     }
     &--women{
         background-image: url('../img/hero__women-bg--mobile.jpg');
