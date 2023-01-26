@@ -1,9 +1,9 @@
-import { DATA } from "./const";
-import { renderHero } from "./render/renderHero";
-import { renderNaviagtion } from "./render/renderNavigaion";
-import { renderProducts } from "./render/renderProduct";
+import { DATA } from "../const";
+import { renderHero } from "../render/renderHero";
+import { renderNaviagtion } from "../render/renderNavigaion";
+import { renderProducts } from "../render/renderProduct";
 
-export const categoryPage = (routerData) =>{
+export const categoryPageController = (routerData) =>{
     const {gender, category} = routerData.data;
     const params = {gender, category};
     

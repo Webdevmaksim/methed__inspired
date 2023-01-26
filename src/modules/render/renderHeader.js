@@ -1,4 +1,4 @@
-import { createElement } from "../createElement";
+import { createElement } from "../utils/createElement";
 import  logo from '../../img/main-logo.svg';
 import { search, searchToggle } from "./renderSearch";
 
