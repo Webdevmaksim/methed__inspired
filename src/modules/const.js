@@ -14,3 +14,10 @@ export const  TITLE = {
         id: '3215522146'
     },
 };
+
+export const header = document.querySelector('.header'),
+    nav = document.querySelector('.navigation'),
+    main = document.querySelector('main'),
+    hero = document.querySelector('.hero'),
+    products = document.querySelector('.goods'),
+    footer = document.querySelector('.footer');

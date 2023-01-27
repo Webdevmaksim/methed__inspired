@@ -27,6 +27,7 @@ createElement('input',{
     name: 'search',
     placeholder: 'Найти...',
     className: 'search__input',
+    autocomplete: 'off'
 },{
     parent: form
 });

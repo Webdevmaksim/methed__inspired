@@ -1,6 +1,7 @@
 import { createElement } from "../utils/createElement";
 import  logo from '../../img/main-logo.svg';
 import { search, searchToggle } from "./renderSearch";
+import { header } from "../const";
 
 
 export const searchBtn = createElement('button',{
@@ -96,7 +97,6 @@ buttons.forEach(elem =>{
 // }
 
 export const renderHeader = () => {
-    const header = document.querySelector('.header');
 
     header.append(container);
     header.after(search);

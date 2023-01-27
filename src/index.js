@@ -9,10 +9,11 @@ import { createCssColors } from './modules/createCssColors';
 
 //* API
 import { getData } from './modules/getData';
-import { API_URL, DATA } from './modules/const';
+import { API_URL, DATA, main } from './modules/const';
 import { createElement } from './modules/utils/createElement';
 import { categoryPageController } from './modules/controllers/categoryPageController';
 import { searchPageController } from './modules/controllers/searchController';
+import { favoriteController } from './modules/controllers/favoriteController';
 
 const init = async () =>{
     try{
@@ -42,24 +43,14 @@ const init = async () =>{
 
 
         router.on('search', searchPageController);
-        //? - What should I do with this?
-        // router.on('search', (data)=>{
-        //     console.log(data.params.value);
-        // });
 
-        // setTimeout(() => {
-        //     router.navigate('men');
-        // }, 3000);
-
-        // setTimeout(() => {
-        //     router.navigate('women');
-        // }, 5000);
+        router.on('favorite', favoriteController);
     }catch(ev){
         console.warn(ev);
         createElement('h2',{
             textContent: 'Что-то пошло не так, попробуйте позже...'
         },{
-            parent: document.querySelector('main'),
+            parent: main,
             cb(h2){
                 h2.style.textAlign = 'center';
             }

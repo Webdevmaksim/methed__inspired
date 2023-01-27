@@ -1,4 +1,4 @@
-import { DATA } from "../const";
+import { DATA, nav } from "../const";
 import { createElement } from "../utils/createElement";
 
 let flag = false;
@@ -6,7 +6,6 @@ let flag = false;
 let oldGender = '';
 
 export const renderNaviagtion = (gender, category) => {
-    const nav = document.querySelector('.navigation');
 
     
     if(!gender){
