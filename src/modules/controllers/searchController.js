@@ -1,3 +1,4 @@
+import { renderCard } from "../render/renderCard";
 import { renderHero } from "../render/renderHero";
 import { renderNaviagtion } from "../render/renderNavigaion";
 import { renderProducts } from "../render/renderProduct";
@@ -23,5 +24,6 @@ export const searchPageController = (routerData) =>{
 
     renderNaviagtion('all');
     renderHero(false);
+    renderCard(false);
     renderProducts(routerData.params.value, params);
 };

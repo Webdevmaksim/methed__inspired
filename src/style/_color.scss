@@ -1,4 +1,14 @@
 .color{
+    &__input{
+        display: none;
+    }
+    &__input:checked + &--check{
+        position: absolute;
+        inset: 0;
+        display: block;
+        border: 1px solid $grey;
+        border-radius: 50%
+    }
     position: relative;
     width: 18px;
     height: 18px;
@@ -23,5 +33,8 @@
         &:hover{
             border: 0.4px solid #929292;
         }
+    }
+    &--check{
+        border: 0.4px solid #929292;
     }
 }
