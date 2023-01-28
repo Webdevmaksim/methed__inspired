@@ -125,6 +125,7 @@
   &__color-list {
     display: flex;
     gap: 6px;
+    flex-wrap: wrap;
     .color--check{
       border: none;
     }
@@ -163,6 +164,7 @@
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
+    flex-wrap: wrap;
   }
 
   &__size-item {
