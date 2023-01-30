@@ -4,10 +4,10 @@ import { getFavorite, handlerFavorite } from "../controllers/favoriteController"
 import { createElement } from "../utils/createElement";
 import { renderCount } from "./renderCount";
 
-export const renderCard = (data) => {
+export const renderCard = ({data, render}) => {
     card.textContent = '';
 
-    if(!data){
+    if(!render){
         return;
     }
 

@@ -21,4 +21,6 @@ export const header = document.querySelector('.header'),
     hero = document.querySelector('.hero'),
     products = document.querySelector('.goods'),
     card = document.querySelector('.card'),
+    cart = document.querySelector('.cart'),
+    order = document.querySelector('.order'),
     footer = document.querySelector('.footer');

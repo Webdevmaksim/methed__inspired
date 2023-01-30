@@ -24,9 +24,9 @@ const heroLink = createElement('a',{
 {
     parent: content
 });
-export const renderHero = (gender) => {
+export const renderHero = ({gender, render}) => {
     
-    if (!gender){
+    if (!render){
         hero.style.display = 'none';
         return;
     }

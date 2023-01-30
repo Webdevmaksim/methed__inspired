@@ -1,7 +1,9 @@
 import { products } from "../const";
 import { renderCard } from "../render/renderCard";
+import { renderCart } from "../render/renderCart";
 import { renderHero } from "../render/renderHero";
 import { renderNaviagtion } from "../render/renderNavigaion";
+import { renderOrder } from "../render/renderOrder";
 import { renderProducts } from "../render/renderProduct";
 
 
@@ -50,8 +52,11 @@ products.addEventListener('click', handlerFavorite);
 
 
 export const favoriteController = () =>{
-    renderNaviagtion('all');
-    renderHero(false);
-    renderCard(false);
-    renderProducts('Избранное', {list:getFavorite()});
+    renderNaviagtion({repeat: true, render: true});
+    renderHero({render: true});
+    renderCard({render: true});
+    renderProducts({title: 'Избранное', params: {list:getFavorite()}, render: true});
+    renderCart({render: false});
+    renderOrder({render: false});
+
 };

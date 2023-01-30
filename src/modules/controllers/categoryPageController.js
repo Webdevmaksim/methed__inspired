@@ -1,7 +1,9 @@
 import { DATA } from "../const";
 import { renderCard } from "../render/renderCard";
+import { renderCart } from "../render/renderCart";
 import { renderHero } from "../render/renderHero";
 import { renderNaviagtion } from "../render/renderNavigaion";
+import { renderOrder } from "../render/renderOrder";
 import { renderProducts } from "../render/renderProduct";
 
 export const categoryPageController = (routerData) =>{
@@ -19,9 +21,13 @@ export const categoryPageController = (routerData) =>{
 
     const {title} = DATA.navigation[gender].list.find(item => item.slug === category);
 
-    renderNaviagtion(gender,category);
-    renderHero(false);
-    renderCard(false);
-    renderProducts(title, params);
+    renderNaviagtion({gender,category, render: true});
+    renderHero({render: false});
+    renderCard({render: false});
+    renderProducts({title, params, render: true});
+    
+    renderCart({render: true});
+    renderOrder({render: true});
+
 
 };

@@ -29,7 +29,7 @@ export const cartLink = createElement('a',{
     <path d="M8.25 6.75C8.25 5.75544 8.64509 4.80161 9.34835 4.09835C10.0516 3.39509 11.0054 3 12 3C12.9946 3 13.9484 3.39509 14.6517 4.09835C15.3549 4.80161 15.75 5.75544 15.75 6.75"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>			
     `,
-    href: 'cart'
+    href: '#cart'
 });
 
 

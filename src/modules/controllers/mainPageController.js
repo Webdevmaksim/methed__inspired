@@ -1,13 +1,17 @@
 import { renderCard } from "../render/renderCard";
+import { renderCart } from "../render/renderCart";
 import { renderHero } from "../render/renderHero";
 import { renderNaviagtion } from "../render/renderNavigaion";
+import { renderOrder } from "../render/renderOrder";
 import { renderProducts } from "../render/renderProduct";
 
 
 export const mainPageController = (gender = 'women') => {
-    renderNaviagtion(gender);
-    renderHero(gender);
-    renderCard(false);
-    renderProducts('новинки', {gender});
+    renderNaviagtion({gender, render: true});
+    renderHero({gender, render: true});
+    renderCard({render: false});
+    renderProducts({title: 'Новинки', params: {gender}, render: true});
+    renderCart({render: false});
+    renderOrder({render: false});
 };
 
