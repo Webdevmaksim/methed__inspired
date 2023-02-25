@@ -26,8 +26,8 @@ export const categoryPageController = (routerData) =>{
     renderCard({render: false});
     renderProducts({title, params, render: true});
     
-    renderCart({render: true});
-    renderOrder({render: true});
+    renderCart({render: false});
+    renderOrder({render: false});
 
 
 };

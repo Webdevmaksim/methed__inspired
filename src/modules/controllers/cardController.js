@@ -20,7 +20,7 @@ export const cardController = async(routerData) =>{
     renderProducts({
         title: 'Вам также может понравиться',
         params: { count: 4, gender },
-        render: true,
+        render: true
         });
     renderCart({render: false});
     renderOrder({render: false});

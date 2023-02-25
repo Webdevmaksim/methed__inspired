@@ -53,9 +53,13 @@ products.addEventListener('click', handlerFavorite);
 
 export const favoriteController = () =>{
     renderNaviagtion({repeat: true, render: true});
-    renderHero({render: true});
-    renderCard({render: true});
-    renderProducts({title: 'Избранное', params: {list:getFavorite()}, render: true});
+    renderHero({render: false});
+    renderCard({render: false});
+    renderProducts({
+        title: 'Избранное', 
+        params: {list:getFavorite()}, 
+        render: true
+    });
     renderCart({render: false});
     renderOrder({render: false});
 
