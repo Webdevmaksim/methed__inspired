@@ -74,7 +74,7 @@ export const renderCart = ({render}) => {
 				<div class="item__color">
 					<p class="item__subtitle item__color-title">Цвет</p>
 
-					<div class="item__color-item color color_${product.color} color_check"></div>
+					<div class="item__color-item color color--${product.color} color--check"></div>
 				</div>
 
 				<div class="item__size">
