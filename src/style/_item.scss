@@ -149,7 +149,8 @@
     transition: all 0.2s ease-in-out;
     @include laptop{
       &:hover{
-        transform: scale(1.5);
+        transform: rotate(90deg);
+        background-color: red;
       }
     }
   }

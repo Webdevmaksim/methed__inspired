@@ -8,7 +8,7 @@ import { getData } from "../getData";
 import { createElement } from "../utils/createElement";
 import { renderCount } from "./renderCount";
 
-export const renderCart = ({render}) => {
+export const renderCart = ({render, cartGoodStorage}) => {
     
     cart.textContent = '';
     
@@ -36,11 +36,11 @@ export const renderCart = ({render}) => {
 		}
 	);
 
-	getCart().forEach(async product => {
+	getCart().forEach( product => {
 
-		const data = await getData(`${API_URL}/api/goods/${product.id}`);
-
-		console.log(data);
+		const data =  cartGoodStorage.getProduct(product.id);
+		console.log('data: ', data);
+		
 
 		const li = createElement('li',
 		{
@@ -96,6 +96,7 @@ export const renderCart = ({render}) => {
 						const isRemove = removeCart(product);
 						if(isRemove){
 							li.remove();
+							calcTotalPrice.update();
 						}
 					});
 				}
@@ -105,6 +106,7 @@ export const renderCart = ({render}) => {
 		const countBlock = renderCount(product.count, 'item__count', count => {
 			product.count = count;
 			addProductCart(product, true);
+			calcTotalPrice.update();
 		});
 
 		article.insertAdjacentElement('beforeend', countBlock);
@@ -128,14 +130,16 @@ export const renderCart = ({render}) => {
 		'p',
 		{
 		className: 'cart__total-price',
-		textContent: 'руб 0'
+		// textContent: 'руб 0'
 		},
 		{
-			parent: cartTotal
+			parent: cartTotal,
+			cb(elem){
+				calcTotalPrice.update();
+				calcTotalPrice.writeTotal(elem);
+			}
 		}
 	);
-
-	// ! - 32:20 
 };
 
 /* 
