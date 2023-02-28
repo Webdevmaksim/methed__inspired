@@ -1,4 +1,4 @@
-import { API_URL } from "../const";
+import { API_URL, cart } from "../const";
 import { getData } from "../getData";
 import { renderCard } from "../render/renderCard";
 import { renderCart } from "../render/renderCart";
@@ -7,7 +7,8 @@ import { renderNaviagtion } from "../render/renderNavigaion";
 import { renderOrder } from "../render/renderOrder";
 import { renderProducts } from "../render/renderProduct";
 
-const cartGoodStorage = {
+
+export const cartGoodStorage = {
     goods: [],
     _add(product){
         if(!this.goods.some(item => item.id === product.id)){
@@ -16,7 +17,7 @@ const cartGoodStorage = {
     },
     add(goods){
         if(Array.isArray(goods)){
-            goods.forEach(product => {
+            goods.forEach((product) => {
                 this._add(product);
             });
         } else{
@@ -73,8 +74,6 @@ export const addProductCart = (product, equal) => {
 
     localStorage.setItem('cart', JSON.stringify(productList));
 
-
-    console.log('product: ', product);
     // return JSON.stringify(product);
 };
 
@@ -87,6 +86,10 @@ export const removeCart = (product)=>{
 
     localStorage.setItem('cart', JSON.stringify(productList));
     return true;
+};
+
+export const clearCart = () =>{
+    localStorage.removeItem('cart');
 };
 
 export const cartController = async () =>{

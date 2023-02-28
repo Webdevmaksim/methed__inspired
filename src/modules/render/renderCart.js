@@ -37,10 +37,8 @@ export const renderCart = ({render, cartGoodStorage}) => {
 	);
 
 	getCart().forEach( product => {
-
-		const data =  cartGoodStorage.getProduct(product.id);
-		console.log('data: ', data);
 		
+		const data =  cartGoodStorage.getProduct(product.id);
 
 		const li = createElement('li',
 		{

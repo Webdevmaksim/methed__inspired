@@ -30,8 +30,25 @@ export const cartLink = createElement('a',{
     </svg>			
     `,
     href: '#cart'
+},{
+    append: createElement(
+        'div',
+        {
+            className: 'cart-counter-fragment',
+            textContent: '1'
+        },
+        {
+            cb(elem){
+                // 
+            }
+        }
+    )
 });
 
+cartLink.style.cssText = `
+    display: block;
+    position: relative;
+`;
 
 export const favoriteLink = createElement('a',{
     className: 'header__link',

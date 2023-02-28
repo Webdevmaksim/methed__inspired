@@ -62,5 +62,21 @@
             }
         }
     }
+}
 
+// Cart-counter
+
+.cart-counter-fragment{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: red;
 }
