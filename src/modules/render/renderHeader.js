@@ -74,7 +74,7 @@ const container = createElement('div',{
 
 createElement('a',{
     className: 'header__logo',
-    href: '/#',
+    href: './#',
     innerHTML: `<img src="${logo}" alt="Логотип Inspired">`
 },{
     parent: container

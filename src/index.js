@@ -29,7 +29,7 @@ const init = async () =>{
             renderFooter();
         });
 
-        router.on('/', () => {
+        router.on('./', () => {
             mainPageController();
         });
 
