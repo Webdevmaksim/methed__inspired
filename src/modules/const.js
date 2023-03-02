@@ -2,7 +2,8 @@ export const COUNT_PAGINATION = 3;
 
 export const DATA = {};
 
-export const API_URL = 'http://localhost:8024';
+export const API_URL = 'https://hexagonal-jagged-aries.glitch.me';
+// export const API_URL = 'http://localhost:8024';
 
 export const  TITLE = {
     women:{

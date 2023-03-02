@@ -127,7 +127,7 @@ const cartTotal = createElement(
 
 createElement('p',{
   className: 'modal__total-price',
-  textContent: 'руб '
+  textContent: ''
 },{
   parent:cartTotal,
   append: createElement('span',{},{
